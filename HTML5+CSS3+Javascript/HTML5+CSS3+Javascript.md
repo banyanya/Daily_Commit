@@ -2,33 +2,27 @@
 ```
 *2020.02.23 작성 시작*
 참고 교재 : HTML5+CSS3+Javascript (황기태 지음 / 생능출판)
-```
 
-[HTML5](#HTML5)
-[Tag](#Tag)
-[Media](#Media)
-[Hyperlink](#Hyperlink)
-[Form](#Form)
-
-[CSS3](#CSS3)
-[Javascript](#Javascript)
+- [HTML5](#HTML5)
+- [CSS3](#CSS3)
+- [Javascript](#Javascript)
 
 # HTML5
-### - Tag
-### - Media
-### - Hyperlink
-### - Form
+### 1. 일반
+### 2. 오디오, 비디오
+### 3. 하이퍼링크
+### 4. 폼
 
 # CSS3
-### - Selector
-### - Stylize
-### - Decoration
+### 1. 셀렉터
+### 2. 시각적 효과
+### 3. 꾸미기
 
 # Javascript
-### - Javascript의 특성
-### - Core
-### - HTML DOM
-### - Event
-### - BOM
-### - 통신
-### - Media
+### 1. Javascript의 특성
+### 2. 코어 객체
+### 3. HTML DOM 객체
+### 4. 이벤트
+### 5. 윈도우(BOM) 객체
+### 6. 통신
+### 7. 오디오, 비디오
