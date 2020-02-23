@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script>
+            function randomInt() {
+                return Math.floor(Math.random() * 9) + 1;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Math를 이용한 구구단 연습</h1>
+        <hr>
+        <script>
+            // 구구단 문제 생성
+            var quiz = randomInt() + "*" + randomInt();
+
+            // 사용자로부터 정답을 입력받음
+            var input = prompt(quiz + "은?", "");
+            if(input == null){
+                document.write("구구단 연습을 종료합니다.");
+            }
+            else {
+                var answer = eval(quiz);
+                if (answer == input){
+                    document.write("정답! ");
+                }
+                else {
+                    document.write("땡! ");
+                }
+                document.write(quiz + "=" + "<strong>" + answer + "</strong>입니다.<br>")
+            }
+        </script>
+    </body>
+</html>
