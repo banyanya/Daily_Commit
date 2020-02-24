@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>innerHTML을 이용하여 HTML 콘텐츠 동적 변경</title>
+        <script>
+            function change() {
+                var p = document.getElementById("tree");
+                p.innerHTML = "귀여운 <img src='file:///C:/Users/ZETTY%20YUN/Documents/Programming/Daily_Commit/HTML5+CSS3+Javascript/200224/graph.png'> 트리구조";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>innerHTML 활용 : 아래 글자에 클릭하면 예쁜 트리구조가 보입니다 ^^♥</h1>
+        <hr>
+        <p id="tree" onclick="change()">클릭하세용용</p>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>DOM 객체의 구조 출력 : p 객체 사례</title>
+    </head>
+    <body>
+        <h1>DOM 객체 p의 프로퍼티, 스타일, 이벤트 리스너</h1>
+        <hr>
+        <p id="firstP"
+        style="color:blue; background:yellow"
+        onclick="this.style.color='teal'">
+        이것은 <span style="color:red">문장입니당</span>
+        </p>
+        <script>
+            var p = document.getElementById("firstP");
+            var text = "p.id = " + p.id + "\n";
+            text += "p.tagName = " + p.tagName + "\n";
+            text += "p.innerHTML = " + p.innerHTML + "\n";
+            text += "p.style.color = " + p.style.color + "\n";
+            text += "p.onclick = " + p.onclick + "\n";
+            text += "p.childElementCount = " + p.childElementCount + "\n";
+            text += "너비 = " + p.offsetWidth + "\n";
+            text += "높이 = " + p.offsetHeight + "\n";
+
+            alert(text); // 알림창으로 text 내용을 띄움
+        </script>
+    </body>
+</html>
