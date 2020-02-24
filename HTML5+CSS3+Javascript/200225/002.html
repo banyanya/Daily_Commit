@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>갬블링 게임</title>
+        <style>
+            div {
+                border: 1px solid orange;
+                background-color: lightsalmon;
+                font-size: 100px;
+                color: blue;
+                font-style: italic;
+            }
+            span {
+                margin: 0.5em;
+            }
+        </style>
+        <script>
+            function change(id) {
+                var obj = document.getElementById(id);
+                var num = Math.floor(Math.random() * 3);
+                obj.innerHTML = num;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>갬블링 게임</h1>
+        각 숫자를 클릭하면 0에서 2 사이의 난수로 바뀝니다. 모두 같은 수가 나오면 승리합니다.
+        <hr>
+        <div>
+            <span id='one' onclick='change("one")'>0</span>
+            <span id='two' onclick='change("two")'>0</span>
+            <span id='three' onclick='change("three")'>0</span>
+        </div>
+        <p id='answer'> </p>
+
+        <script>
+
+            o = document.getElementById('one');
+            t = document.getElementById('two');
+            th = document.getElementById('three');
+
+            // if(o == t && o == th) {
+            //     document.getElementById('answer').innerHTML("success");
+            // }
+            // else {
+            //     document.getElementById('answer').innerHTML("fail");
+            // }
+        </script>
+
+    </body>
+</html>
