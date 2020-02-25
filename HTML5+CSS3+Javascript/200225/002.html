@@ -14,12 +14,29 @@
             span {
                 margin: 0.5em;
             }
+            .btn { cursor: pointer;}
         </style>
         <script>
             function change(id) {
-                var obj = document.getElementById(id);
-                var num = Math.floor(Math.random() * 3);
-                obj.innerHTML = num;
+                var obj = document.getElementById(id); // 객체 생성
+                var num = Math.floor(Math.random() * 3); // 0~2 난수 발생
+                obj.innerHTML = num; // 난수를 화면에 출력
+
+                if(id == 'three') { // 세번째 숫자를 눌렀을 때
+                    var output = document.getElementById('answer'); // output 객체 생성
+                    var ans = document.getElementsByTagName("span"); // span 태그의 객체 생성
+                    var answer = [ans[0].innerHTML, ans[1].innerHTML, ans[2].innerHTML]; // 세 숫자를 배열로 저장
+                    answer[0] = Number(answer[0]); // 배열 element를 숫자로 변환해주는 작업
+                    answer[1] = Number(answer[1]);
+                    answer[2] = Number(answer[2]);
+
+                    if(answer[0] == answer[1] && answer[0] == answer[2]) { // 숫자가 모두 같으면
+                        output.innerHTML = "Success(click here to do again)";
+                    }
+                    else {
+                        output.innerHTML = "fail(click here to do again)";
+                    }
+                }
             }
         </script>
     </head>
@@ -28,25 +45,10 @@
         각 숫자를 클릭하면 0에서 2 사이의 난수로 바뀝니다. 모두 같은 수가 나오면 승리합니다.
         <hr>
         <div>
-            <span id='one' onclick='change("one")'>0</span>
-            <span id='two' onclick='change("two")'>0</span>
-            <span id='three' onclick='change("three")'>0</span>
+            <span id='one' class='btn' onclick='change("one")'>0</span>
+            <span id='two' class='btn' onclick='change("two")'>0</span>
+            <span id='three' class='btn' onclick='change("three")'>0</span>
         </div>
-        <p id='answer'> </p>
-
-        <script>
-
-            o = document.getElementById('one');
-            t = document.getElementById('two');
-            th = document.getElementById('three');
-
-            // if(o == t && o == th) {
-            //     document.getElementById('answer').innerHTML("success");
-            // }
-            // else {
-            //     document.getElementById('answer').innerHTML("fail");
-            // }
-        </script>
-
+        <p id='answer' class='btn' onclick="window.location.reload()"> </p>
     </body>
 </html>
