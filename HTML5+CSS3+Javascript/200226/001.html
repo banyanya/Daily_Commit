@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML 태그 내에 이벤트 리스너 작성</title>
+        <script>
+            var span;
+            function init() { 
+                span = document.getElementById("span");
+                span.onmouseover = over; // over()를 리스너로 등록
+                span.onmouseout = out; // out()를 리스너로 등록
+            }
+            function over() {
+                span.style.backgroundColor = 'orange';
+            }
+            function out() {
+                span.style.backgroundColor = 'white';
+            }
+        </script>
+    </head>
+    <body onload = "init()">
+        <h1>HTML 태그에 리스너 작성</h1>
+        <hr>
+        <p onmouseover="this.style.backgroundColor='orchid'"
+            onmouseout="this.style.backgroundColor='white'">
+        마우스 올리면 배경이 orchid 색으로 변합니다. </p>
+
+        <span id="span">마우스 올리면 배경이 orange 색으로 변합니다.</span>
+    </body>
+</html>

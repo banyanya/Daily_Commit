@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>addEventListener() 사용</title>
+        <script>
+            var p;
+
+            function init() { // 문서가 완전히 로드되었을 때 호출
+                p = document.getElementById("p");
+                p.addEventListener("mouseover", over); // over() 리스너 등록
+                p.addEventListener("mouseout", out); // out() 리스너 등록
+            }
+            function over() {
+                p.style.backgroundColor = "lightpink";
+            }
+            function out() {
+                p.style.backgroundColor = "white";
+            }
+        </script>
+    </head>
+    <body onload="init()">
+        <h1>addEventListener()를 이용한 리스너 등록</h1>
+        <hr>
+        <p id="p">마우스를 올리면 배경색이 lightpink 색으로 변경</p>
+    </body>
+</html>
