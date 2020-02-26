@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>익명 함수로 이벤트 리스너 작성</title>
+        <script>
+            var span;
+            function init() {
+                span = document.getElementById("span");
+                span.onmouseover = function() { // 익명함수
+                    this.style.backgroundColor = "lightsalmon";
+                };
+                span.addEventListener("mouseout", function() { // 익명함수
+                    this.style.backgroundColor = "white";
+                });
+                // span.onmouseout = function() {
+                //     this.style.backgroundColor = "white";
+                // }
+            }
+        </script>
+    </head>
+    <body onload="init()">
+        <h1>익명 함수로 이벤트 리스너 작성</h1>
+        <hr>
+        <span id="span">마우스를 올리면 배경색이 lightsalmon 색이 됩니당</span>
+    </body>
+</html>
