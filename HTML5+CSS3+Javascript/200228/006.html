@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>oncontextmenu로 소스 보기나 이미지 다운로드 금지</title>
+        <script>
+            function hideMenu() {
+                alert("오른쪽 클릭 금지 ㅡ.ㅡ");
+                return false;
+            }
+            document.oncontextmenu = hideMenu;
+            // 리스너 등록 시 () 생략 >> https://github.com/banyanya/Daily_Commit/blob/master/HTML5%2BCSS3%2BJavascript/200226/200226.md
+        </script>
+    </head>
+    <body>
+        <h1>oncontextmenu에서 컨텍스트 메뉴 금지</h1>
+        <hr>
+        마우스 오른쪽 클릭은 금지됩니다. 아무 곳이나 클릭해도 컨텍스트 메뉴를 볼 수 없습니다.
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>onmousemove와 마우스 위치 및 버튼</title>
+        <style>
+            div {
+                background: skyblue;
+                width: 250px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>마우스 이벤트 객체의 프로퍼티와 onmousemove</h1>
+        <hr>
+        이미지 위에 마우스를 움직일 때 onmousemove 리스너가 실행되고, 마우스의 위치를 보여줍니다.<br>
+        <img src="file:///C:/Users/ZETTY%20YUN/Documents/Programming/Daily_Commit/HTML5+CSS3+Javascript/200224/graph.png" onmousemove="where(event)">
+        <div id="div"></div>
+
+        <script>
+            var div = document.getElementById("div");
+            function where(e) {
+                var text = "버튼 = " + e.button + "<br>";
+                text += "(screenX, screenY) = " + e.screenX + ", " + e.screenY + "<br>";
+                text += "(clientX, clientY) = " + e.clientX + ", " + e.clientY + "<br>";
+                text += "(offsetX, offsetY) = " + e.offsetX + ", " + e.offsetY + "<br>";
+                text += "(x, y) = " + e.x + ", " + e.y + "<br>";
+
+                div.innerHTML = text;
+            }
+        </script>
+    </body>
+</html>
