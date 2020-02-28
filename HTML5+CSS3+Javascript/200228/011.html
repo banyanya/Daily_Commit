@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>체크박스로 선택한 물품 계산</title>
+        <script>
+            function calculate(obj) {
+                var total = document.getElementById("total");
+
+                if (obj.checked)
+                    total.value = Number(total.value) + Number(obj.value);
+                else
+                    total.value = Number(total.value) - Number(obj.value);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>물품을 선택하면 금액이 자동 계산됩니다.</h1>
+        <hr>
+        <label><input type="checkbox" name="buy" value="10000" onclick="calculate(this)">모자 1만원</label>
+        <label><input type="checkbox" name="buy" value="30000" onclick="calculate(this)">구두 3만원</label>
+        <label><input type="checkbox" name="buy" value="80000" onclick="calculate(this)">명품가방 8만원</label>
+        <br>
+        지불하실 금액 <input type="text" id="total" value="0">
+    </body>
+</html>

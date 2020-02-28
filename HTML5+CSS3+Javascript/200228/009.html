@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>onfocus와 onblur. 이름을 입력하지 않고 다른 창으로 갈 수 없음</title>
+        <script>
+            function checkFilled(obj) {
+                if(obj.value == "") {
+                    alert("enter name");
+                    obj.focus(); // obj에 다시 포커스
+                }
+            }
+        </script>
+    </head>
+    <body onload = "document.getElementById('name').focus();">
+        <h1>onfocus와 onblur</h1>
+        <hr>
+        <p>이름을 입력하지 않고 다른 창으로 이동할 수 없습니다.</p>
+        이름 <input type="text" id="name" onblur="checkFilled(this)"> <br>
+        학번 <input type="text"> <br>
+    </body>
+</html>
