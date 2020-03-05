@@ -1,3 +1,5 @@
+// 외부 참조 구조체 연습
+
 #include <stdio.h>
 
 struct point {
