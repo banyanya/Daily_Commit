@@ -3,12 +3,12 @@ int main(void) {
     int age;
     char name[20];
 
-    printf("ë‚˜ì´ë¥¼ ì…ë ¥ : ");
+    printf("³ªÀÌ¸¦ ÀÔ·Â : ");
     scanf("%d", &age);
 
-    // fflush(stdin); // ì…ë ¥ ë²„í¼ë¥¼ ë¹„ìš´ë‹¤.
+    // fflush(stdin); // ÀÔ·Â ¹öÆÛ¸¦ ºñ¿î´Ù.
 
-    printf("ì´ë¦„ì„ ì…ë ¥ : ");
+    printf("ÀÌ¸§À» ÀÔ·Â : ");
     scanf("%s", name);
 
     printf("%d \n", age);

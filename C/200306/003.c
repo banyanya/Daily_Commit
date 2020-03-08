@@ -1,4 +1,4 @@
-// return 키워드를 통해 함수 호출 영역으로 반환하는 코드
+// return Ű���带 ���� �Լ� ȣ�� �������� ��ȯ�ϴ� �ڵ�
 
 #include <stdio.h>
 

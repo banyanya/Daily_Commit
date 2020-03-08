@@ -1,4 +1,4 @@
-// ìê¸° ì°¸ì¡° êµ¬ì¡°ì²´ ì—°ìŠµ
+// ÀÚ±â ÂüÁ¶ ±¸Á¶Ã¼ ¿¬½À
 
 #include <stdio.h>
 
@@ -13,7 +13,7 @@ int main(void) {
     struct student stu2 = {"Lee", 80, NULL};
     struct student stu3 = {"Goo", 60, NULL};
 
-    stu1.link = &stu2; // ë¶ˆì™„ì „í•œ í´ë˜ìŠ¤ í˜•ì‹ì— ëŒ€í•œ í¬ì¸í„°ëŠ” ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. >> í•´ê²°í–ˆë‹¤. student ì˜¤íƒ€ì˜€ìŒ
+    stu1.link = &stu2; // ºÒ¿ÏÀüÇÑ Å¬·¡½º Çü½Ä¿¡ ´ëÇÑ Æ÷ÀÎÅÍ´Â »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù. >> ÇØ°áÇß´Ù. student ¿ÀÅ¸¿´À½
     stu2.link = &stu3;
 
     printf("%s %d \n", stu1.name, stu1.money);
